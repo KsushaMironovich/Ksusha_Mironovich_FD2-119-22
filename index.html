@@ -1,14 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div>
-        hello
-    </div>>
-</body>
-</html>
+<script>
+    let name = prompt ('ваше ФИО:');
+    while (name === "") {
+        
+        name =  prompt ('введите ФИО снова')
+    }
+    let age = prompt ('ваш возраст в годах:');
+    while (age <= "0"){
+        age = prompt ('введидте возраст в годах снова')
+    }
+    let days = prompt ('ваш возраст в днях:');
+    let through = prompt ('через 5 лет вам будет:');
+    let sex = confirm ('ваш пол-мужской?');
+    let work =confirm ('вы на пенсии?');
+    alert (`ваше ФИО: ${name}
+    ваш возраст в годах: ${age}
+    ваш возраст в днях: ${days}
+    через 5 лет вам будет: ${through}
+    ваш пол: ${sex}
+    вы на пенсии: ${work}`)
+
+</script>
