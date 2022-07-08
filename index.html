@@ -8,8 +8,11 @@
     while (age <= "0"){
         age = prompt ('введидте возраст в годах снова')
     }
-    let days = prompt ('ваш возраст в днях:');
-    let through = prompt ('через 5 лет вам будет:');
+    // let days = prompt ('ваш возраст в днях:');
+
+    // let through = prompt ('через 5 лет вам будет:');
+    parseInt (age)
+    let days = age * 365;
     let sex = confirm ('ваш пол-мужской?');
     let work =confirm ('вы на пенсии?');
     alert (`ваше ФИО: ${name}
