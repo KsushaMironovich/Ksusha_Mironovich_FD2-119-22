@@ -8,18 +8,19 @@
     while (age <= "0"){
         age = prompt ('введидте возраст в годах снова')
     }
-    // let days = prompt ('ваш возраст в днях:');
-
-    // let through = prompt ('через 5 лет вам будет:');
-    parseInt (age)
-    let days = age * 365;
+    Number (age)
+    let days = Number (age) * 365;
+    let through = Number (age) + 5;
     let sex = confirm ('ваш пол-мужской?');
+    let a = (sex === true) ? 'Мужской' : 'Женский';
     let work =confirm ('вы на пенсии?');
-    alert (`ваше ФИО: ${name}
+    let b = (work === true) ? 'Да' : 'Нет';
+    alert (`
+    ваше ФИО: ${name}
     ваш возраст в годах: ${age}
     ваш возраст в днях: ${days}
     через 5 лет вам будет: ${through}
-    ваш пол: ${sex}
-    вы на пенсии: ${work}`)
+    ваш пол: ${a}
+    вы на пенсии: ${b}`)
 
 </script>
