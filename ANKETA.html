@@ -1,26 +1,42 @@
-<script>
-    let name = prompt ('ваше ФИО:');
-    while (name === "") {
-        
-        name =  prompt ('введите ФИО снова')
-    }
-    let age = prompt ('ваш возраст в годах:');
-    while (age <= "0"){
-        age = prompt ('введидте возраст в годах снова')
-    }
-    Number (age)
-    let days = Number (age) * 365;
-    let through = Number (age) + 5;
-    let sex = confirm ('ваш пол-мужской?');
-    let a = (sex === true) ? 'Мужской' : 'Женский';
-    let work =confirm ('вы на пенсии?');
-    let b = (work === true) ? 'Да' : 'Нет';
-    alert (`
-    ваше ФИО: ${name}
-    ваш возраст в годах: ${age}
-    ваш возраст в днях: ${days}
-    через 5 лет вам будет: ${through}
-    ваш пол: ${a}
-    вы на пенсии: ${b}`)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let name = prompt ('ваше ФИО:');
+        while (name === "") {
+            
+            name =  prompt ('введите ФИО снова')
+        }
+        let age = prompt ('ваш возраст в годах:');
+        Number.isInteger (age);
+        (Number.isInteger(age) === true ? '' : 'введите ваш возраст в годах снова')
+        while (age <= "0"){
+            age = prompt ('введидте возраст в годах снова')
+        }
+    
+        Number (age)
+        let days = Number (age) * 365;
+        let through = Number (age) + 5;
+        let sex = confirm ('ваш пол-мужской?');
+        let a = (sex === true) ? 'Мужской' : 'Женский';
+        let c = (((a === true) && (age >= 63))) || (((a === false) && age >= 58)) ? 'Да': 'Нет' ;
+        // let c = ( (a === false) && age >= 58) ? 'Да': 'Нет';
+        alert (`
+        ваше ФИО: ${name}
+        ваш возраст в годах: ${age}
+        ваш возраст в днях: ${days}
+        через 5 лет вам будет: ${through}
+        ваш пол: ${a}
+        вы на пенсии: ${с}`)
+    
+    </script>
 
-</script>
+</body>
+</html>
