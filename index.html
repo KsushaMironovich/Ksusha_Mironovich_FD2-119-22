@@ -26,24 +26,41 @@
         // }
         // console.log(disemvowel('Hello super world'));
 
-        function accum(s) {
-            s.toLowerCase();
-            
-            for (let i = 0; i < s.length; i++) {
-                if (i > 0) {
-                    i.repeat (1);
-                }
+        // function accum(s) {
+        //     s.toLowerCase();
+
+        //     for (let i = 0; i < s.length; i++) {
+        //         if (i > 0) {
+        //             i.repeat (1);
+        //         }
+        //     }
+
+        //     for (let i = 0; i < s.length; i++) {
+        //         if (i === 0) {
+        //             i.toUpperCase();
+        //         }
+        //     }
+        //     return str;
+
+        // }
+        // console.log(accum('fjdkvfd'));
+
+        function squares(x, n) {
+            let squares = [];
+            if (n <= 0) {
+                return squares
+            }
+            for (let i = 0; i < n; i++) {
+
+                x *= x;
+                squares.push(x);
             }
 
-            for (let i = 0; i < s.length; i++) {
-                if (i === 0) {
-                    i.toUpperCase();
-                }
-            }
-            return str;
-
+            return squares
         }
-        console.log(accum('fjdkvfd'));
+        squares(2, 5)
+        console.log(squares(2, 5))
+
 
     </script>
 
