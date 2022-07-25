@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="button"  value="1" onclick="getNumber(1)">
+    <input type="button" name="2" value="2" onclick="getNumber(2)">
+    <input type="button" name="3" value="3" onclick="getNumber(3)"><br>
+    <input type="button" name="4" value="4" onclick="getNumber(4)">
+    <input type="button" name="5" value="5" onclick="getNumber(5)">
+    <input type="button" name="6" value="6" onclick="getNumber(6)"><br>
+    <input type="button" name="7" value="7" onclick="getNumber(7)">
+    <input type="button" name="8" value="8" onclick="getNumber(8)">
+    <input type="button" name="9" value="9" onclick="getNumber(9)"><br>
+    <input type="button" name="0" value="0" onclick="getNumber(0)">
+
+    <input type="button" name="-" value="-" onclick="getSign('-')">
+    <input type="button" name="+" value="+" onclick="getSign('+')"><br>
+    <input type="button" name="*" value="*" onclick="getSign('*')">
+    <input type="button" name="/" value="/" onclick="getSign('/')">
+
+    <input type="button" name="=" value="=" onclick="getResult('=')">
+
+
+    <script>
+        let a;
+        let b;
+        function getNumber(num) {
+            if (!a) {
+                a = num;
+            } else {
+                b = num;
+            }
+        }
+
+        let c;
+        function getSign(sign) {
+            c = sign;
+        }
+
+        function getResult(res) {
+            switch (c) {
+                case '+':
+                    alert(a + b);
+                    break;
+                case '-':
+                    alert(a - b);
+                    break;
+                case '*':
+                    alert(a * b);
+                    break;
+                case '/':
+                    alert(a / b);
+                    break;
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>
