@@ -16,7 +16,7 @@
             height: 50px;
             background-color: black;
         }
-        .main{
+        #main{
             position: absolute;
             width: 500px;
             height: 500px;
@@ -25,7 +25,7 @@
     </style>
 
 
-    <div class="main">
+    <div id="main">
         <div id="square"></div>
     </div>
 
@@ -33,23 +33,29 @@
 
 
     <script>
-        const first = document.getElementsByClassName('main');
-        const second = document.getElementById('square');
-        let rightCoordinate = 0;
+        const main = document.getElementById('main');
+        const square = document.getElementById('square');
+        let leftCoordinate = 0;
         let topCoordinate = 0;
         window.addEventListener('keydown', (e) => {
             switch (e.keyCode) {
-                case 39: rightCoordinate += -10; break;
+                case 39: leftCoordinate += 10; break;
                 case 38: topCoordinate += -10; break;
-                case 37: rightCoordinate += 10; break;
+                case 37: leftCoordinate += -10; break;
                 case 40: topCoordinate += 10; break;
 
 
             }
-            square.style.right = rightCoordinate + 'px';
-            square.style.top = topCoordinate + 'px';
+            if ((leftCoordinate >= 0) && (leftCoordinate + square.offsetWidth <= main.offsetWidth)){
+                square.style.left = leftCoordinate + 'px';
+            } 
+           
+            if ((topCoordinate >= 0) && (topCoordinate + square.offsetHeight <= main.offsetHeight)) {
+                square.style.top = topCoordinate + 'px';
+            } 
+            
 
-            // поставить ограничения   
+              
         })
 
     </script>
