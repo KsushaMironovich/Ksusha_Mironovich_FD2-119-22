@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+     
+        let name = prompt('ваше ФИО:');
+        while (name === "" || name === " ") {
+            name = prompt('ваше ФИО:')
+        }
+        
+        let age = prompt('ваш возраст в годах:');
+        Number.isInteger(+age);
+        while (Number.isInteger(+age) === false) {
+            age = prompt('ваш возраст в годах:');
+        }
+
+        let days = +age * 365;
+        let through = +age + 5;
+        let sex = confirm ('ваш пол-мужской?');
+        let s = (sex === true) ? 'Мужской' : 'Женский';
+        let a = (sex === true && age >= 63) || (sex === false && age >=58) ? 'Да' : 'Нет';
+        
+        alert(`
+        ваше ФИО: ${name}
+        ваш возраст в годах: ${age}
+        ваш возраст в днях: ${days}
+        через 5 лет вам будет: ${through}
+        ваш пол: ${s}
+        вы на пенсии: ${a}`)
+
+    </script>
+
+</body>
+
+</html>

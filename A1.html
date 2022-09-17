@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // let str = prompt('Введите строку:');
+        // console.log ('*' + str.split(' ').join('') + '*');
+
+        // let str = prompt('Введите строку:');
+        // str.split('');
+        // let a = str.split('');
+
+        // function space(a) {
+
+        //     for (let i = 0; i < a.length; i++) {
+        //         if (a[i] === ' ') {
+        //             delete a[i];
+        //         }
+        //         let b = a.join('');
+        //     }
+        //     return b;
+
+        // }
+        // console.log(space(a))
+
+
+        let str = prompt('Введите строку:');
+        str.split('');
+        let a = str.split('');
+
+        function space(a) {
+            return a != ' ';
+        }
+        console.log(str.filter(space) );
+
+
+
+    </script>
+
+</body>
+
+</html>
